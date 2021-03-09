@@ -1,7 +1,21 @@
-server.port: 8888
+server:
+  port: 8888
 # git uri containing configs
-spring.cloud.config.server.git:
-  uri: https://github.optum.com/sbagrec1/config-repo
+spring:
+  profiles:
+    active: git, vault
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.optum.com/sbagrec1/config-repo
+          order: 2
+        vault:
+          host: 127.0.0.1
+          port: 8200
+          kv-version: 2
+          order: 1
+
 
 
 
