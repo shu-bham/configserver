@@ -1,15 +1,16 @@
 server:
   port: 8888
-# git uri containing configs
 spring:
   profiles:
     active: git, vault
   cloud:
     config:
       server:
+        # git config
         git:
           uri: https://github.optum.com/sbagrec1/config-repo
           order: 2
+        # vault config
         vault:
           host: 127.0.0.1
           port: 8200
