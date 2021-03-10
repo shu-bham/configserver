@@ -16,6 +16,7 @@ spring:
           port: ${VAULT_PORT:8200}
           kv-version: 2
           order: 1
+#    todo: add kafka binder props
 
 
 
