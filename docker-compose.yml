@@ -1,0 +1,11 @@
+version: "3"
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 8888:8888
+    environment:
+      - GIT_URI=https://github.com/sbagrec1/config-repo
+      - VAULT_HOST=localhost
+      - VAULT_PORT=8200

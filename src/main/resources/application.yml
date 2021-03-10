@@ -8,12 +8,12 @@ spring:
       server:
         # git config
         git:
-          uri: https://github.optum.com/sbagrec1/config-repo
+          uri: ${GIT_URI:https://github.optum.com/sbagrec1/config-repo}
           order: 2
         # vault config
         vault:
-          host: 127.0.0.1
-          port: 8200
+          host: ${VAULT_HOST:127.0.0.1}
+          port: ${VAULT_PORT:8200}
           kv-version: 2
           order: 1
 
