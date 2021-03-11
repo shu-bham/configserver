@@ -9,3 +9,5 @@ services:
       - GIT_URI=https://github.com/sbagrec1/config-repo
       - VAULT_HOST=localhost
       - VAULT_PORT=8200
+      - KAFKA_BUS_CHANNEL=inputTopic
+      - KAFKA_BROKER=localhost:9092
